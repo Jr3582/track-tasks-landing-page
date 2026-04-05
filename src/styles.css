@@ -9,8 +9,9 @@
   --font-serif: 'Fraunces', serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --color-primary: #F97316;    /* vivid orange */
-  --color-secondary: #EA580C;  /* deeper burnt orange */
-  --color-tertiary: #FED7AA;   /* soft peach */
+  --color-primary: #F97316;
+  --color-secondary: #EA580C;
+  --color-tertiary: #FED7AA;
+  --color-background: #1E3A5F;
 }
 
