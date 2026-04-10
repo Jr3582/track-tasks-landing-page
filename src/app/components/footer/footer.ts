@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { LucideAngularModule, SquareCheck } from 'lucide-angular';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [LucideAngularModule],
   templateUrl: './footer.html',
 })
-export class FooterComponent {}
+export class FooterComponent {
+  icons = { SquareCheck }
+}

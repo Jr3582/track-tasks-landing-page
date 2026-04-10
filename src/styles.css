@@ -26,12 +26,12 @@
     }
 }
 
-.hover-btn {
-    transition: transform 0.5s ease; 
+.hover-ani {
+    transition: transform 1s ease; 
 }
 
-.hover-btn:hover {
-    transform: scale(1.1);
+.hover-ani:hover {
+    transform: scale(1.05);
 }
 
 .group:has(.pointer-events-auto:hover) {

@@ -1,10 +1,12 @@
 <div class="flex flex-col w-screen h-screen">
     <span class="flex text-black text-6xl font-serif w-full leading-tight font-serif pl-6 pt-2 font-bold">Four features we offer for you!</span>
     <div class="grid grid-cols-2 w-full h-full mx-auto max-w-7xl p-6 gap-4 mt-8">
-        <div *ngFor="let feature of features" class="bg-gradient-to-b from-background to-white to-500% rounded-xl">
-            <div class="p-6">
-                <span class="text-4xl font-serif text-white font-bold">{{feature.featureName}}</span>
+        @for (feature of features; track feature) {
+            <div class="bg-gradient-to-b from-background to-white to-500% rounded-xl hover-ani">
+                <div class="p-6">
+                    <span class="text-4xl font-serif text-white font-bold">{{feature.featureName}}</span>
+                </div>
             </div>
-        </div>
+        }
     </div>
 </div>
