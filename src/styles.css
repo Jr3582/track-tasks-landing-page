@@ -14,16 +14,28 @@
   --font-serif: 'Fraunces', serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --color-primary: #F97316;
-  --color-secondary: #EA580C;
-  --color-tertiary: #FED7AA;
-  --color-background: #1E3A5F;
+  --color-primary: #F97316; /* BRIGHT ORANGE */
+  --color-secondary: #EA580C; /* BURNT ORANGE */
+  --color-tertiary: #FED7AA; /* SOFT PEACH */
+  --color-background: #1E3A5F; /* NAVY BLUE */
 }
 
 @layer carousel {
     .card {
-        @apply flex-[0_0_800px] h-[20em] p-2 bg-transparent text-xl text-center content-center overflow-hidden;
+        @apply flex-[0_0_60vw] h-[30vh] p-2 bg-transparent text-xl text-center content-center overflow-hidden;
     }
+}
+
+.hover-btn {
+    transition: transform 0.5s ease; 
+}
+
+.hover-btn:hover {
+    transform: scale(1.1);
+}
+
+.group:has(.pointer-events-auto:hover) {
+    transform: scale(1.1);
 }
 
 .no-scrollbar {

@@ -1,6 +1,12 @@
 <div class="flex flex-col w-screen h-screen">
     <span class="flex text-gray-700 text-6xl font-serif w-1/2 leading-tight font-serif pl-6 pt-2 font-bold">Frequently Asked Questions</span>
-    <details>
-        <summary>Question</summary>
-    </details>
+    <div class="flex w-full flex-col justify-center items-start mt-12 mx-auto max-w-4xl flex-nowrap shrink-0">
+        @for (card of faqCards; track card) {
+            <details class="cursor-pointer mt-4">
+                <summary class="text-2xl font-serif select-none">{{card.title}}</summary>
+                <p class="text-xl font-serif w-3/4 select-none mt-2">{{card.description}}</p>
+            </details> 
+            <hr class="border-1 border-gray-200 w-full mt-4 mb-2">
+        }
+    </div>
 </div>
