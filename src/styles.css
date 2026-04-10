@@ -4,6 +4,11 @@
 
 @import 'tailwindcss';
 
+@keyframes slide {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
 @theme {
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   --font-serif: 'Fraunces', serif;
@@ -13,5 +18,16 @@
   --color-secondary: #EA580C;
   --color-tertiary: #FED7AA;
   --color-background: #1E3A5F;
+}
+
+@layer carousel {
+    .card {
+        @apply flex-[0_0_800px] h-[20em] p-2 bg-transparent text-xl text-center content-center overflow-hidden;
+    }
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
