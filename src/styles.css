@@ -4,11 +4,6 @@
 
 @import 'tailwindcss';
 
-@keyframes slide {
-    from {translate: 0;}
-    to {translate: -100%;}
-}
-
 @theme {
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   --font-serif: 'Fraunces', serif;
@@ -18,13 +13,43 @@
   --color-secondary: #EA580C; /* BURNT ORANGE */
   --color-tertiary: #FED7AA; /* SOFT PEACH */
   --color-background: #1E3A5F; /* NAVY BLUE */
+
+  --animate-slot-in: slotIn 1.2s ease-out forwards;
+  --animate-pop-in: popIn 1.0s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+/* 
+@keyframes slide {
+    from {translate: 0;}
+    to {translate: -100%;}
+} */
+
+@keyframes slotIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@layer carousel {
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* @layer carousel {
     .card {
         @apply flex-[0_0_60vw] h-[40vh] p-2 bg-transparent text-xl text-center content-center overflow-hidden;
     }
-}
+} */
 
 .hover-ani {
     transition: transform 1s ease; 
