@@ -22,7 +22,7 @@
 
 @layer carousel {
     .card {
-        @apply flex-[0_0_60vw] h-[30vh] p-2 bg-transparent text-xl text-center content-center overflow-hidden;
+        @apply flex-[0_0_60vw] h-[40vh] p-2 bg-transparent text-xl text-center content-center overflow-hidden;
     }
 }
 
