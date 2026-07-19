@@ -1,6 +1,6 @@
 <div class="relative flex flex-col w-full h-screen overflow-hidden">
-    <div class="flex w-full flex-col justify-center items-center mt-24 mx-auto max-w-2xl flex-nowrap shrink-0">
-        <span class="flex flex-wrap justify-center gap-6 text-8xl text-center font-serif text-white font-thin">
+    <div class="flex w-full flex-col justify-center items-center mt-24 mx-auto max-w-xl lg:max-w-2xl px-4 flex-nowrap shrink-0">
+        <span class="flex flex-wrap justify-center gap-6 text-6xl lg:text-8xl text-center font-serif text-white font-thin">
             @for (word of ['Never', 'Lose\n', 'Track', 'Again!']; track word; let i = $index) {
             <span 
             class="opacity-0 inline-block" 
@@ -14,7 +14,7 @@
         </span>
         <hr class="border-1 border-gray-200 w-full mt-4 mb-2">
         <span 
-        class="text-center text-gray-700 text-xl font-serif opacity-0" 
+        class="text-center text-gray-700 text-md lg:text-xl font-serif opacity-0" 
         [class.animate-slot-in]="introState.headerAnimationDone()" 
         [style.animation-delay]="'600ms'"
         (animationend)="onAnimEnd()"
@@ -25,14 +25,13 @@
         class="group transition-all duration-500 group-has-[.pointer-events-auto:hover]:hover-btn opacity-0" 
         [class.animate-slot-in]="introState.headerAnimationDone()" 
         [style.animation-delay]="'1350ms'"
-        (animationend)="onAnimEnd()"
-        >
+        (animationend)="onAnimEnd()">
             <button (click)="goToApp()"
-                class="w-fit h-fit px-4 py-2 bg-gradient-to-b from-background to-white to-800% rounded-xl mt-4 font-serif font-bold text-white border-1 cursor-pointer pointer-events-auto shadow-2xl">
+                class="w-fit h-fit px-4 py-2 bg-gradient-to-b from-background to-white to-800% rounded-xl mt-4 font-serif font-bold text-white border-1 cursor-pointer pointer-events-auto shadow-2xl text-xl lg:text-4xl">
                 View App
             </button>
             <div
-                class="w-fit h-fit px-4 py-2 [mask-image:linear-gradient(to_top,black,transparent_70%)] bg-gradient-to-b from-background to-white/80 rounded-xl font-serif font-bold text-white border-1 scale-y-[-1] pointer-events-none opacity-40">
+                class="w-fit h-fit px-4 py-2 [mask-image:linear-gradient(to_top,black,transparent_70%)] bg-gradient-to-b from-background to-white/80 rounded-xl font-serif font-bold text-white border-1 scale-y-[-1] pointer-events-none opacity-40 text-xl lg:text-4xl">
                 View App
             </div>
         </div>

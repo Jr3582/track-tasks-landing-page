@@ -1,6 +1,6 @@
-<div class="flex mx-auto max-w-7xl justify-between flex-nowrap">
-    <div class="flex flex-row items-end">
-        <span class="text-6xl font-serif pl-2 pt-4 pb-2 text-white shrink-0 mt-8 flex gap-3">
+<div class="flex mx-auto max-w-2xl lg:max-w-7xl justify-between flex-nowrap">
+    <div class="flex flex-row items-end px-4">
+        <span class="text-2xl lg:text-6xl font-serif pr-2 lg:pl-2 lg:pt-4 lg:pb-2 text-white shrink-0 mt-8 flex gap-2 lg:gap-3">
             @for (word of ['Track', 'Tasks']; track word; let i = $index) {
             <span 
             class="opacity-0 inline-block"
@@ -15,7 +15,7 @@
         <lucide-icon 
         [img]="icons.SquareCheck" 
         size="96" 
-        class="stroke-white opacity-0 inline-block animate-pop-in"
+        class="stroke-white opacity-0 inline-block animate-pop-in lg:w-24 lg:h-24 w-12 h-12"
         [class.animate-pop-in]="introState.introDone()"
         [style.animation-delay]="'1050ms'" 
         stroke 
@@ -23,23 +23,23 @@
         />
     </div>
 
-    <div class="flex w-80 self-stretch justify-around items-end">
+    <div class="flex w-80 lg:w-100 self-stretch justify-around items-end">
         <a 
-        class="font-serif text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out opacity-0"
+        class="font-serif text-xl lg:text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out opacity-0"
         [class.animate-slot-in]="introState.introDone()"
         [style.animation-delay]="'150ms'"
         (animationend)="onAnimEnd()"
         >
         Changelog</a>
         <a 
-        class="font-serif text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out opacity-0" 
+        class="font-serif text-xl lg:text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out opacity-0" 
         [class.animate-slot-in]="introState.introDone()"
         [style.animation-delay]="'300ms'"
         (animationend)="onAnimEnd()"
         >
         Blog</a>
         <a 
-        class="font-serif text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out opacity-0"
+        class="font-serif text-xl lg:text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out opacity-0"
         [class.animate-slot-in]="introState.introDone()" 
         [style.animation-delay]="'450ms'"
         (animationend)="onAnimEnd()"

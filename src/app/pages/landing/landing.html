@@ -2,9 +2,8 @@
 <div 
 class="fixed inset-0 flex justify-center items-center top-0 left-0 bg-black z-50 transition-opacity duration-700" 
 [class.opacity-0]="introState.introDone()"
-[class.pointer-events-none]="introState.introDone()"
->
-    <span class="text-white font-serif text-8xl">{{ displayedText() }}<span class="animate-blinks font-serif text-10xl">|</span></span>
+[class.pointer-events-none]="introState.introDone()">
+    <span class="text-white font-serif text-6xl lg:text-8xl">{{ displayedText() }}<span class="animate-blinks font-serif">|</span></span>
 </div>
 <div class="h-screen overflow-y-scroll overflow-x-hidden scroll-smooth snap-y snap-mandatory">
     <div class="snap-start h-screen relative bg-gradient-to-b from-background to-white to-100%">

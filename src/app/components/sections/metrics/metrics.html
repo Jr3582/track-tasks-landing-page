@@ -1,35 +1,36 @@
 <div class="flex flex-col w-screen h-screen">
-    <div class="grid grid-cols-[1fr_2fr] mx-auto min-w-7xl w-1/2 p-6 gap-4 h-full mt-8">
+    <div class="grid grid-cols-[1fr_2fr] mx-auto max-w-7xl lg:max-w-7xl p-6 gap-4 h-full mt-8">
         <div class="grid grid-rows-3 bg-gray-300 rounded-lg p-4 gap-4">
             @for (obj of metricImg; track obj) {
                 <div>
-                    <img [src]="obj.img" class="w-full h-64 object-cover rounded-lg bg-white border-2 border-black">
+                    <img [src]="obj.img" class="w-full h-full lg:h-64 object-contain rounded-lg bg-white border-2 border-black">
                 </div>
 
             }
         </div>
         <div class=" rounded-lg h-full flex flex-col">
             <span
-                class="flex text-black text-5xl font-serif leading-tight font-serif pt-2 font-medium justify-start pl-6">Delegate
-                your tasks</span>
+                class="flex text-black text-2xl lg:text-5xl font-serif leading-tight font-serif pt-2 font-medium justify-start pl-6">
+                Delegate your tasks
+            </span>
             <div class="flex-1 w-full h-full grid grid-cols-[1fr_2fr]">
-                <div class="flex grid grid-rows items-center justify-start pl-6">
-                    <span class="text-6xl font-serif font-thin">10,000+</span>
-                    <span class="text-6xl font-serif font-thin">3x</span>
-                    <span class="text-6xl font-serif font-thin">98%</span>
+                <div class="flex grid grid-rows items-center justify-start pl-2 lg:pl-6">
+                    <span class="text-2xl lg:text-6xl font-serif font-thin">10,000+</span>
+                    <span class="text-2xl lg:text-6xl font-serif font-thin">3x</span>
+                    <span class="text-2xl lg:text-6xl font-serif font-thin">98%</span>
                 </div>
-                <div class="flex  grid grid-rows items-center justify-center pl-6">
-                    <div class="flex flex-col w-110">
-                        <span class="text-4xl font-serif">Tasks Completed</span>
-                        <span class="text-2xl text-gray-700 font-serif">Every task tracked from creation to done.</span>
+                <div class="flex  grid grid-rows items-center justify-center pl-2 lg:pl-6">
+                    <div class="flex flex-col w-full">
+                        <span class="text-2xl lg:text-4xl font-serif">Tasks Completed</span>
+                        <span class="text-xl lg:text-2xl text-gray-700 font-serif">Every task tracked from creation to done.</span>
                     </div>
-                    <div class="flex flex-col w-110">
-                        <span class="text-4xl font-serif">Faster Completion</span>
-                        <span class="text-2xl text-gray-700 font-serif">Clear pipelines keep work moving, not stuck.</span>
+                    <div class="flex flex-col w-full">
+                        <span class="text-2xl lg:text-4xl font-serif">Faster Completion</span>
+                        <span class="text-xl lg:text-2xl text-gray-700 font-serif">Clear pipelines keep work moving, not stuck.</span>
                     </div>
-                    <div class="flex flex-col w-110">
-                        <span class="text-4xl font-serif">On-Time Delivery Rate</span>
-                        <span class="text-2xl text-gray-700 font-serif">Ownership and deadlines that actually stick.</span>
+                    <div class="flex flex-col w-full">
+                        <span class="text-2xl lg:text-4xl font-serif">On-Time Delivery Rate</span>
+                        <span class="text-xl lg:text-2xl text-gray-700 font-serif">Ownership and deadlines that actually stick.</span>
                     </div>
                 </div>
 
