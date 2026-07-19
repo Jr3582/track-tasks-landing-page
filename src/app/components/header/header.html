@@ -2,17 +2,48 @@
     <div class="flex flex-row items-end">
         <span class="text-6xl font-serif pl-2 pt-4 pb-2 text-white shrink-0 mt-8 flex gap-3">
             @for (word of ['Track', 'Tasks']; track word; let i = $index) {
-            <span class="opacity-0 animate-slot-in inline-block" [style.animation-delay]="i * 150 + 'ms'">{{ word
-                }}</span>
+            <span 
+            class="opacity-0 inline-block"
+            [class.animate-slot-in]="introState.introDone()" 
+            [style.animation-delay]="i * 150 + 'ms'"
+            (animationend)="onAnimEnd()"
+            >
+                {{ word}}
+            </span>
             }
         </span>
-        <lucide-icon [img]="icons.SquareCheck" size="96" class="stroke-white opacity-0 animate-pop-in inline-block"
-            [style.animation-delay]="'350ms'" stroke />
+        <lucide-icon 
+        [img]="icons.SquareCheck" 
+        size="96" 
+        class="stroke-white opacity-0 inline-block animate-pop-in"
+        [class.animate-pop-in]="introState.introDone()"
+        [style.animation-delay]="'1050ms'" 
+        stroke 
+        (animationend)="onAnimEnd()"
+        />
     </div>
 
     <div class="flex w-80 self-stretch justify-around items-end">
-        <a class="font-serif text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out animate-slot-in opacity-0" [style.animation-delay]="'450ms'">Changelog</a>
-        <a class="font-serif text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out animate-slot-in opacity-0" [style.animation-delay]="'300ms'">Blog</a>
-        <a class="font-serif text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out animate-slot-in opacity-0" [style.animation-delay]="'150ms'">Pricing</a>
+        <a 
+        class="font-serif text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out opacity-0"
+        [class.animate-slot-in]="introState.introDone()"
+        [style.animation-delay]="'150ms'"
+        (animationend)="onAnimEnd()"
+        >
+        Changelog</a>
+        <a 
+        class="font-serif text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out opacity-0" 
+        [class.animate-slot-in]="introState.introDone()"
+        [style.animation-delay]="'300ms'"
+        (animationend)="onAnimEnd()"
+        >
+        Blog</a>
+        <a 
+        class="font-serif text-2xl cursor-pointer text-white hover:scale-105 duration-300 ease-in-out opacity-0"
+        [class.animate-slot-in]="introState.introDone()" 
+        [style.animation-delay]="'450ms'"
+        (animationend)="onAnimEnd()"
+        >
+        Pricing</a>
     </div>
 </div>
