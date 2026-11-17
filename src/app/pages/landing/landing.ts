@@ -17,7 +17,7 @@ export class LandingComponent implements OnInit {
   private intervalId: any;
   introState = inject(IntroStateService);
   displayedText = signal('');
-  title = "Track Tasks";
+  title = "Just Tracks";
   counter = 0;
 
   ngOnInit(): void {
